@@ -271,6 +271,7 @@
             socket = new WebSocket(url);
             socket.onopen = function() {
                 //XXX: TODO What are you going to do here?
+                debug("WebSocket Opened");
             };
             socket.onerror = function(msg) {
                 debug("WebSocket Error:" + msg.data);
@@ -278,7 +279,13 @@
             socket.onmessage = function(msg) {  
                 try {
                     debug("WebSocket Recv:" + msg.data);
-                    //XXX: TODO What are you going to do here?            
+                    //XXX: TODO What are you going to do here?  
+                    
+                    const newMessage = JSON.parse(msg.data);
+                    for (let index in newMessage.data) {
+                        world[index] = newMessage.data[index];
+                    }
+                    drawNextFrame();         
                 } catch (e) {
                     alert("socket on message: " + e);
                 }
