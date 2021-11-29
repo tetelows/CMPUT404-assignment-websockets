@@ -280,7 +280,6 @@
                 try {
                     debug("WebSocket Recv:" + msg.data);
                     //XXX: TODO What are you going to do here?  
-                    
                     const newMessage = JSON.parse(msg.data);
                     for (let index in newMessage.data) {
                         world[index] = newMessage.data[index];
