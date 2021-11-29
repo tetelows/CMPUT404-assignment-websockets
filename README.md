@@ -59,3 +59,11 @@ Contributors
 * Mark Galloway
 * Abram Hindle
 * Cole Mackenzie
+* Carter Tetelowski
+
+
+Sources
+=======
+https://github.com/abramhindle/WebSocketsExamples/blob/master/chat.py
+https://github.com/tetelows/CMPUT404_Assignment4.git
+https://www.w3schools.com/tags/canvas_arc.asp
